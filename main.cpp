@@ -42,3 +42,11 @@ int main() {
     } while (choice != 3);
     return 0;
 }
+void loadStudents(vector<Student>& students) {
+    ifstream f("students.txt");
+    string idx, name;
+    while (getline(f, idx, ',')) {
+        getline(f, name);
+        students.push_back(Student(idx, name));
+    }
+}
