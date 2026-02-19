@@ -1,4 +1,10 @@
-#include <iostream>
+class AttendanceSession {
+public:
+    string courseCode;
+    string date;
+    map<string, string> attendance;
+    AttendanceSession(string cc, string d);
+};#include <iostream>
 #include <vector>
 using namespace std;
 
