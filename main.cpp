@@ -69,5 +69,17 @@ case 5: {
     std::cout << "Attendance Summary:\n";
     // Loop through sessions and display attendance status counts
     std::cout << "Present: X, Absent: Y, Late: Z\n";
+    
     break;
+    case 4: {
+    std::cout << "Enter student index to mark attendance: ";
+    int index;
+    std::cin >> index;
+    if (index >= 0 && index < students.size()) {
+        // Proceed with marking attendance
+    } else {
+        std::cout << "Invalid student index!\n";
+    }
+    break;
+}
 }
