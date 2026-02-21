@@ -65,3 +65,9 @@ case 4: {
     // Logic to mark attendance based on status
     break;
 }
+case 5: {
+    std::cout << "Attendance Summary:\n";
+    // Loop through sessions and display attendance status counts
+    std::cout << "Present: X, Absent: Y, Late: Z\n";
+    break;
+}
