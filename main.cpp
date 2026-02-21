@@ -84,5 +84,31 @@ int main() {
         }
     } while (choice != 6);
 
+    // Saving students
+void saveStudents(const std::vector<Student>& students) {
+    std::ofstream file("students.txt");
+    for (const auto& s : students) {
+        file << s.indexNumber << "," << s.name << "\n";
+    }
+    file.close();
+}
+
+// Loading students
+std::vector<Student> loadStudents() {
+    std::vector<Student> students;
+    std::ifstream file("students.txt");
+    std::string line;
+    while (std::getline(file, line)) {
+        size_t comma = line.find(',');
+        if (comma != std::string::npos) {
+            std::string idx = line.substr(0, comma);
+            std::string name = line.substr(comma + 1);
+            students.push_back(Student(idx, name));
+        }
+    }
+    file.close();
+    return students;
+}
+
     return 0;
 }
