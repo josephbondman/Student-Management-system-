@@ -1,10 +1,4 @@
-class AttendanceSession {
-public:
-    string courseCode;
-    string date;
-    map<string, string> attendance;
-    AttendanceSession(string cc, string d);
-};#include <iostream>
+#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -42,17 +36,32 @@ int main() {
     } while (choice != 3);
     return 0;
 }
-void loadStudents(vector<Student>& students) {
-    ifstream f("students.txt");
-    string idx, name;
-    while (getline(f, idx, ',')) {
-        getline(f, name);
-        students.push_back(Student(idx, name));
+
+class AttendanceSession {
+public:
+    string courseCode;
+    string date;
+    map<string, string> attendance;
+    AttendanceSession(string cc, string d);
+};
+case 2: // Attendance
+    cout << "1. Create Session\n";
+    if (subChoice == 1) {
+        sessions.push_back(AttendanceSession("EE201", "2026-02-20"));
     }
+    break;
+
+void AttendanceSession::markAttendance(string index, string status) {
+    attendance[index] = status;
 }
-int main() {
-    // ...
-    saveStudents(students);
-    loadStudents(students);
-    // ...
+
+// Assuming an AttendanceSession class (from Image 3, 5.2 and Image 4 Week 2)
+// In the menu:
+case 4: {
+    // Select a session and student, then mark attendance
+    std::cout << "Mark attendance (P for Present, A for Absent, L for Late): ";
+    char status;
+    std::cin >> status;
+    // Logic to mark attendance based on status
+    break;
 }
