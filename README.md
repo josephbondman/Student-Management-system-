@@ -36,11 +36,6 @@ g++ -o attendance main.cpp
 ./attendance
 ```
 
-### Using Code::Blocks
-
-1. Open `Joseph.cbp`
-2. Build and Run (F9)
-
 ## Menu Options
 
 | Option | Description                        |
