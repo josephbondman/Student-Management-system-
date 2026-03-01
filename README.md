@@ -1,3 +1,5 @@
+# EEE227 MID SEMESTER CAPSTONE PROJECT
+# HND ELECTRICAL ENGINEERING LEVEL 200
 # Digital Attendance System
 
 A console-based digital attendance system built in C++ to replace paper-based attendance taking in lecture halls.
